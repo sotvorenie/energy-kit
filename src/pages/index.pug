@@ -24,16 +24,16 @@ block content
             div.section__header
                 p.our-products__title.h3.section__subtitle.text-w500 Наша продукция
 
-                div.our-products__actions.flex
-                    button(type="button").our-products__btn.prev.flex-center.hover-color-accent
+                div.section__header_actions.flex
+                    button(type="button").our-products__btn.section__header_arrow.prev.flex-center.hover-color-accent
                         include ../components/icons/slider-arrow
-                    button(type="button").our-products__btn.next.flex-center.hover-color-accent
+                    button(type="button").our-products__btn.section__header_arrow.next.flex-center.hover-color-accent
                         include ../components/icons/slider-arrow
 
-            div.our-products__slider.swiper
+            div.our-products__slider.slider.swiper
                 div.swiper-wrapper
                     each item in ourProducts
-                        a.our-products__card.swiper-slide.cursor-pointer
+                        a(href="#").our-products__card.swiper-slide.cursor-pointer
                             div.our-products__img-container.img-container.w-100
                                 img(src=item.img alt=item.title)
 
@@ -42,10 +42,34 @@ block content
 
                                 p.our-products__about= item.text
 
-            div.our-products__pagination
+            div.our-products__pagination.slider__pagination
 
             a(href="#").our-products__link.button.accent.w-296.m-auto Вся продукция
 
     +our-services()
 
     +video()
+
+    section.application-areas.section-p-block-50
+        div.application-areas__inner.container
+            div.section__header
+                p.application-areas__title.h3.section__subtitle.text-w500 Отрасли применения
+
+                div.section__header_arrow_actions.flex
+                    button(type="button").application-areas__btn.section__header_arrow.prev.flex-center.hover-color-accent
+                        include ../components/icons/slider-arrow
+                    button(type="button").application-areas__btn.section__header_arrow.next.flex-center.hover-color-accent
+                        include ../components/icons/slider-arrow
+
+            div.application-areas__slider.slider.swiper
+                div.swiper-wrapper
+                    each item in applicationAreas
+                        div.application-areas__card.swiper-slide.overflow-hidden
+                            div.application-areas__img-container.img-container.w-100
+                                img(src=item.img alt="")
+
+                            div.application-areas__info
+                                p.h6= item.title
+
+
+            div.application-areas__pagination.slider__pagination

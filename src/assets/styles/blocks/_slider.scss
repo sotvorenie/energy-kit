@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.slider {
+
+  &.swiper-pagination-lock {
+    margin: 0 !important;
+  }
+
+  &, &__pagination {
+    margin-bottom: fluid(30, 20);
+  }
+
+  &__pagination {
+    width: fit-content !important;
+    margin-inline: auto;
+
+    .swiper-pagination-bullet {
+      @include square(12);
+
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid var(--color-gray);
+      margin: 0 rem(16) !important;
+      transition:
+              width var(--transition-duration),
+              background-color var(--transition-duration),
+              border-color var(--transition-duration);
+
+      @include mobile {
+        @include square(9);
+
+        margin: 0 rem(8) !important;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      width: rem(52) !important;
+      border-radius: rem(20);
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+
+      @include mobile {
+        width: rem(32) !important;
+      }
+    }
+  }
+}

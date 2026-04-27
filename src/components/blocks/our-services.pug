@@ -4,7 +4,7 @@ mixin our-services(titleText = 'Наши услуги')
             div.section__header
                 p.our-services__title.h3.section__subtitle.text-w500= titleText
 
-                a(href="#").button.accent.text-nowrap Все услуги
+                a(href="#").section__header_btn.button.accent.text-nowrap Все услуги
 
             ul.our-services__list.row
                 each item, index in ourServices

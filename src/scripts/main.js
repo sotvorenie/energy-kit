@@ -4,3 +4,4 @@ import './search.js'
 import './burgerMenu.js'
 
 import './ourProducts.js'
+import './applicationAreas.js'

@@ -1,0 +1,18 @@
+@use '../../helpers' as *;
+
+.application-areas {
+
+  &__card {
+    border-radius: var(--border-radius);
+  }
+
+  &__img-container {
+    aspect-ratio: 413/500;
+  }
+
+  &__info {
+    background: var(--color-accent-alt);
+    padding: rem(20);
+    height: 100%;
+  }
+}

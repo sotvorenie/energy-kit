@@ -36,9 +36,31 @@
   align-items: center;
   justify-content: space-between;
 
-  .button {
+  &_btn {
     white-space: nowrap;
     padding-inline: rem(10);
     min-width: rem(170);
+  }
+
+  &_actions {
+    display: flex;
+  }
+  &_arrow {
+    @include square(38);
+
+    color: var(--color-dark);
+
+    &:first-child {
+      rotate: 180deg;
+    }
+
+    &.swiper-button-disabled {
+      color: var(--color-gray);
+    }
+
+    svg {
+      width: rem(16);
+      height: auto;
+    }
   }
 }

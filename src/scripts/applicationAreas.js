@@ -5,7 +5,7 @@ import 'swiper/css'
 import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.our-products__slider', {
+    const swiper = new Swiper('.application-areas__slider', {
         modules: [Navigation, Pagination],
         slidesPerView: 1,
         spaceBetween: 10,
@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         watchOverflow: true,
 
         navigation: {
-            nextEl: '.our-products__btn.next',
-            prevEl: '.our-products__btn.prev',
+            nextEl: '.application-areas__btn.next',
+            prevEl: '.application-areas__btn.prev',
         },
 
         pagination: {
-            el: '.our-products__pagination',
+            el: '.application-areas__pagination',
             clickable: true,
         },
 

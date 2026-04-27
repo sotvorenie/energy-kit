@@ -93,6 +93,12 @@ button[disabled] {
 .swiper-slide {
   height: auto !important;
 }
+.swiper-pagination-lock {
+  display: none !important;
+}
+.swiper-button-lock {
+  display: none !important;
+}
 
 input {
   font-size: rem(16) !important;
