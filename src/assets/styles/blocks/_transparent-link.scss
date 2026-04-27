@@ -1,0 +1,39 @@
+@use '../helpers' as *;
+
+.transparent-link {
+  @include fluid-text(16, 14);
+
+  color: var(--color-gray);
+  padding: rem(16) rem(6) rem(16) 0;
+  gap: fluid(16, 8);
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile-above {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--color-gray);
+    }
+  }
+
+  @include mobile {
+    @include full-link;
+  }
+
+  svg {
+    width: rem(10);
+    height: auto;
+    margin-right: rem(6);
+  }
+}

@@ -1,0 +1,117 @@
+@use '../../helpers' as *;
+
+.news {
+  background: var(--color-gray-bg-2);
+
+  &__main {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    margin-bottom: fluid(20, 15);
+    min-height: rem(500);
+
+    @include tablet {
+      min-height: rem(350);
+    }
+
+    @include mobile {
+      min-height: 0;
+    }
+
+    &-left {
+      padding: fluid(20, 15);
+    }
+
+    &-top {
+      flex-grow: 1;
+    }
+
+    &-date {
+      @include fluid-text(16, 12);
+
+      color: var(--color-gray);
+      margin-bottom: fluid(30, 15);
+    }
+
+    &-title {
+      @include fluid-text(24, 16);
+
+      margin-bottom: fluid(20, 15);
+    }
+
+    &-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @include tablet {
+        -webkit-line-clamp: 5;
+      }
+    }
+
+    &-img-container {
+
+      @include mobile {
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  &__list {
+    --row-gap: #{rem(10)};
+  }
+
+  &__item {
+    height: rem(124);
+    background: var(--color-light);
+
+    @include tablet {
+      height: rem(105);
+    }
+
+    @include mobile {
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      height: rem(95);
+    }
+
+    &:last-child {
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: 217fr 196fr;
+
+    @include mobile {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+
+  &__left {
+    padding: rem(10) fluid(20, 10) rem(10) rem(10);
+  }
+
+  &__top {
+    flex-grow: 1;
+  }
+
+  &__text {
+    @include fluid-text(15, 13);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__date {
+    @include fluid-text(12, 10);
+
+    color: var(--color-gray);
+  }
+
+  &__img-container {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+}

@@ -8,6 +8,7 @@
 @use 'blocks/section';
 @use 'blocks/button';
 @use 'blocks/slider';
+@use 'blocks/transparent-link';
 
 @use 'blocks/header';
 @use 'blocks/search';
@@ -19,3 +20,4 @@
 @use 'blocks/sections/our-services';
 @use 'blocks/sections/video';
 @use 'blocks/sections/application-areas';
+@use 'blocks/sections/news';
