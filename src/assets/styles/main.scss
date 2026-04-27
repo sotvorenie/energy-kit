@@ -5,6 +5,11 @@
 @use 'globals';
 @use 'classes';
 
+@use 'blocks/section';
+@use 'blocks/button';
+
 @use 'blocks/header';
 @use 'blocks/search';
 @use 'blocks/burger-menu';
+
+@use 'blocks/sections/banner';

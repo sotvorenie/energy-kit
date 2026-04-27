@@ -1,0 +1,5 @@
+@use '../helpers' as *;
+
+.section-p-block {
+  padding-block: fluid(50, 25);
+}

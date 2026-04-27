@@ -1,0 +1,27 @@
+@use '../../helpers' as *;
+
+.banner {
+  background: var(--color-gray-bg-2);
+
+  &__content {
+    --bg: '';
+
+    padding: rem(145) rem(50);
+    color: var(--color-light);
+    background: linear-gradient(#3B3B3BB2, #3B3B3BB2), var(--bg) center/cover no-repeat;
+    border-radius: var(--border-radius);
+
+    @include tablet {
+      padding: rem(60) rem(30);
+    }
+
+    @include mobile {
+      padding: rem(30) var(--container-padding-x);
+    }
+  }
+
+  &__title {
+    max-width: rem(875);
+    margin-bottom: fluid(44, 20);
+  }
+}
