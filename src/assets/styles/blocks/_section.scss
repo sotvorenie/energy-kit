@@ -1,5 +1,20 @@
 @use '../helpers' as *;
 
-.section-p-block {
+.section-p-block-50 {
   padding-block: fluid(50, 25);
+}
+
+.section__subtitle {
+  padding-left: rem(48);
+  position: relative;
+
+  &::before {
+    @include abs-y;
+
+    content: '';
+    width: rem(12);
+    height: rem(19);
+    background: url("/icons/subtitle-arrow.svg") center/contain no-repeat;
+    left: rem(14);
+  }
 }

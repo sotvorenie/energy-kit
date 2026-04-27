@@ -1,0 +1,56 @@
+@use '../../helpers' as *;
+
+.about {
+
+  &__inner {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(15)};
+  }
+
+  &__left {
+    gap: fluid(20, 15);
+  }
+
+  &__block {
+    border-radius: var(--border-radius);
+    gap: fluid(20, 15);
+
+    &:not(.is-active) {
+      background: var(--color-gray-bg-2);
+      padding: fluid(24, 15) fluid(20, 15);
+    }
+    &.is-accent {
+      background: var(--color-accent-alt);
+      padding: fluid(20, 15);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+  }
+
+  &__text {
+    letter-spacing: -1%;
+    margin-bottom: rem(50);
+  }
+
+  &__subtext {
+    @include fluid-text(16, 14);
+
+    color: var(--color-gray);
+    flex: 0 0 63%;
+  }
+
+  &__img-container {
+    border-radius: var(--border-radius);
+
+    @include tablet {
+      order: -1;
+      aspect-ratio: 21/9;
+    }
+
+    @include mobile {
+      aspect-ratio: 16/9;
+    }
+  }
+}

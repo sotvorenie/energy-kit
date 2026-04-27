@@ -4,7 +4,7 @@ block title
     | Главная
 
 block content
-    section.banner.section-p-block
+    section.banner.section-p-block-50
         div.banner__inner.container
             div.banner__content(style="--bg: url(/images/banner-bg.png)")
                 h1.banner__title
@@ -13,3 +13,38 @@ block content
                     | и производитель электротехнического оборудования для объектов энергоснабжения
 
                 a(href="#").banner__btn.button.accent.w-296 Отправить заявку
+
+    section.about.section-p-block-50
+        div.about__inner.container.row
+            div.about__left.col-12.ls-col-6.flex.flex-column
+                div.about__block.is-accent
+                    p.about__title.h3.section__subtitle.text-w500 О компании
+
+                    p.about__text
+                        | ООО «Энергокомплект» специализируется на разработке
+                        br
+                        | и производстве электротехнического оборудования для объектов энергоснабжения различного назначения, таких как тяговые
+                        br
+                        | и распределительные подстанции, генерирующие гидро
+                        br
+                        | и газотурбинные станции, а также передвижные тяговые подстанции для железнодорожного транспорта.
+
+                    a(href="#").about__link.button.light.w-296 Подробнее
+
+                div.about__block.flex.flex-align-center.flex-justify-between
+                    p.about__name.h4.color-accent 0,4–35 кВ
+
+                    p.about__subtext Компактные ячейки без обслуживания на весь срок службы
+
+                div.about__block.flex.flex-align-center.flex-justify-between
+                    p.about__name.h4.color-accent до 220 кВ
+
+                    p.about__subtext Проектирование энергосистем с оптимальным соотношением цена/эффективность
+
+                div.about__block.flex.flex-align-center.flex-justify-between
+                    p.about__name.h4.color-accent 15 МВт
+
+                    p.about__subtext Опыт реализации крупных энергетических проектов «под ключ»
+
+            div.about__img-container.img-container.col-12.ls-col-6
+                img(src="/images/about-img.png" alt="")
