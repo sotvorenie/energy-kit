@@ -65,23 +65,11 @@
   overflow: hidden !important;
 }
 
-@mixin full-vw-centered-line(
-  $property: top,
-  $left: 50%,
-  $right: auto,
-  $translate: -50%
-) {
-  position: relative;
+@mixin full-link {
 
-  &::before {
+  &::after {
     content: '';
     position: absolute;
-    left: $left;
-    right: $right;
-    #{$property}: 0;
-    translate: $translate;
-    width: var(--100vw);
-    height: rem(1);
-    background-color: var(--color-dark-15);
+    inset: 0;
   }
 }

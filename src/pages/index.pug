@@ -1,5 +1,7 @@
 extends ../components/layouts/base.pug
 
+include ../components/blocks/our-services
+
 block title
     | Главная
 
@@ -18,7 +20,7 @@ block content
 
     section.our-products.section-p-block-50
         div.our-products__inner.container
-            div.our-products__header.flex.flex-align-center.flex-justify-between
+            div.section__header
                 p.our-products__title.h3.section__subtitle.text-w500 Наша продукция
 
                 div.our-products__actions.flex
@@ -42,3 +44,5 @@ block content
             div.our-products__pagination
 
             a(href="#").our-products__link.button.accent.w-296.m-auto Вся продукция
+
+    +our-services()

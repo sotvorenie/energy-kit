@@ -1,0 +1,81 @@
+@use '../../helpers' as *;
+
+.our-services {
+
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+
+    @include tablet {
+      --column-gap: #{rem(15)};
+      --row-gap: #{rem(15)};
+    }
+
+    @include mobile {
+      --column-gap: #{rem(10)};
+      --row-gap: #{rem(10)};
+    }
+  }
+
+  &__item {
+    border-radius: var(--border-radius);
+    padding: fluid(20, 10);
+    gap: fluid(13, 8);
+
+    &:not(.is-accent) {
+      background: var(--color-gray-bg-2);
+    }
+    &.is-accent {
+      background: var(--color-accent-alt);
+    }
+  }
+
+  &__number {
+    color: var(--color-gray);
+  }
+
+  &__right {
+    gap: fluid(20, 10);
+  }
+
+  &__top {
+    flex-grow: 1;
+  }
+
+  &__name {
+    margin-bottom: rem(10);
+  }
+
+  &__link {
+    @include fluid-text(16, 14);
+
+    color: var(--color-gray);
+    padding: rem(16) rem(6) rem(16) 0;
+    gap: fluid(16, 8);
+    width: fit-content;
+
+    @include mobile-above {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--color-gray);
+      }
+    }
+
+    @include mobile {
+      @include full-link;
+    }
+
+    svg {
+      width: rem(10);
+      height: auto;
+      margin-right: rem(6);
+    }
+  }
+}

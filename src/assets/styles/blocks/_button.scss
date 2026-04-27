@@ -42,5 +42,6 @@
 
   &.w-296 {
     width: min(#{rem(296)}, 100%);
+    padding-inline: rem(10);
   }
 }

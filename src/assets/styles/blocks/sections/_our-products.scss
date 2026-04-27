@@ -3,11 +3,6 @@
 .our-products {
   background: var(--color-gray-bg-2);
 
-  &__header {
-    margin-bottom: fluid(30, 20);
-    gap: rem(20);
-  }
-
   &__btn {
     @include square(38);
 

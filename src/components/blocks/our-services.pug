@@ -1,0 +1,22 @@
+mixin our-services(titleText = 'Наши услуги')
+    section.our-services.section-p-block-50
+        div.our-services__inner.container
+            div.section__header
+                p.our-services__title.h3.section__subtitle.text-w500= titleText
+
+                a(href="#").button.accent.text-nowrap Все услуги
+
+            ul.our-services__list.row
+                each item, index in ourServices
+                    li.our-services__item(class=[index > 1 ? 'is-accent' : '', index < 2 ? 'col-12 ls-col-6' : 'col-12 ls-col-4']).flex.position-relative
+                        p.our-services__number.h6.text-w500= `${index + 1}/`
+
+                        div.our-services__right.flex.flex-column
+                            div.our-services__top
+                                p.our-services__name.h5.color-accent= item.title
+
+                                p.our-services__text= item.text
+
+                            a(href="#").our-services__link.text-upper.text-w600.flex.flex-align-center.flex-justify-between
+                                span Подробнее
+                                include ../icons/slider-arrow
