@@ -1,0 +1,5 @@
+mixin video(isGray = true)
+    section.video.section-p-block-50(class=isGray ? 'is-gray' : '')
+        div.video__inner.container
+            div.video__img-container.img-container
+                video(src="videos/video.mp4" controls).w-100

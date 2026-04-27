@@ -1,6 +1,7 @@
 extends ../components/layouts/base.pug
 
 include ../components/blocks/our-services
+include ../components/blocks/video
 
 block title
     | Главная
@@ -46,3 +47,5 @@ block content
             a(href="#").our-products__link.button.accent.w-296.m-auto Вся продукция
 
     +our-services()
+
+    +video()

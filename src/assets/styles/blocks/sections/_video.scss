@@ -1,0 +1,13 @@
+@use '../../helpers' as *;
+
+.video {
+
+  &.is-gray {
+    background: var(--color-gray-bg-2);
+  }
+
+  &__img-container {
+    border-radius: var(--border-radius);
+    aspect-ratio: 1280/720;
+  }
+}
