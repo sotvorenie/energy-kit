@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.search {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  transition: opacity var(--transition-duration);
+
+  &:not(.is-active) {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &__content {
+    background: var(--color-light);
+    padding: rem(15);
+    gap: rem(15);
+    transition:
+            transform var(--transition-duration),
+            opacity var(--transition-duration);
+
+    &:not(.is-active) {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  }
+
+  &__close {
+    @include fluid-text(16, 12);
+
+    border: var(--border-alt);
+    padding-inline: rem(15);
+    border-radius: var(--border-radius-medium);
+
+    @include hover {
+      background: var(--color-accent);
+      color: var(--color-light);
+      border-color: var(--color-accent);
+    }
+  }
+}

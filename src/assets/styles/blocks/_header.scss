@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+
+.header {
+
+  &-top__inner, &-bottom__inner {
+    @include fluid-text(16, 12);
+
+    padding-block: fluid(20, 15);
+    gap: fluid(23, 15);
+  }
+
+  &-top {
+    background: var(--color-accent-light);
+  }
+
+  &__logo {
+    width: rem(197);
+    height: rem(38);
+
+    @include tablet {
+      width: rem(160);
+      height: auto;
+    }
+
+    @include mobile {
+      width: rem(140);
+    }
+  }
+
+  &__list {
+    gap: fluid(30, 15);
+    margin-left: fluid(14, 0);
+    letter-spacing: 3%;
+  }
+
+  &__search {
+    width: rem(246);
+
+    input::placeholder, .header__search-btn {
+      color: var(--color-gray);
+    }
+  }
+
+  &__input {
+    border: none;
+    background: var(--color-gray-bg);
+    border-radius: var(--border-radius-regular);
+    padding: rem(10) rem(45) rem(10) rem(16);
+  }
+
+  &__search-btn {
+    @include abs-y;
+    @include square(20);
+
+    right: rem(16);
+  }
+
+  &__actions {
+    gap: rem(10);
+  }
+
+  &__btn {
+    @include square(32);
+    @include flex-center();
+
+    background: var(--color-gray-bg);
+    border-radius: var(--border-radius-regular);
+
+    @include mobile {
+      @include square(28);
+    }
+
+    span {
+      @include flex-center();
+
+      height: 100%;
+      width: 100%;
+    }
+
+    svg {
+      width: 60%;
+      height: 60%;
+    }
+  }
+}

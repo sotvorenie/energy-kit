@@ -1,0 +1,30 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #FFFFFF;
+
+  --color-dark: #1E1E1E;
+
+  --color-gray: #848484;
+  --color-gray-alt: #5A5F61;
+  --color-gray-border: #C9CBC8;
+  --color-gray-bg: #FAFAF9;
+
+  --color-accent: #008BA7;
+  --color-accent-alt: #E2FAFF;
+  --color-accent-light: #F4FDFF;
+
+  --border: 1px solid var(--color-gray);
+  --border-alt: 1px solid var(--color-gray-border);
+
+  --border-radius-regular: #{rem(6)};
+  --border-radius-medium: #{rem(8)};
+  --border-radius: #{rem(10)};
+
+  --font-family-base: 'Golos Text', sans-serif;
+
+  --container-width: #{rem(1280)};
+  --container-padding-x: #{rem(20)};
+
+  --transition-duration: 0.2s;
+}

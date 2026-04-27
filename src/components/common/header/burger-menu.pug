@@ -1,0 +1,7 @@
+div.burger-menu.position-fixed.z-100
+    div.burger-menu__inner.container.h-100.flex-center
+        nav.burger-menu__menu
+            ul.burger-menu__list
+                each item in headerLinks
+                    li.burger-menu__item.text-center
+                        a(href=item.href).burger-menu__link.text-upper.text-w600= item.title

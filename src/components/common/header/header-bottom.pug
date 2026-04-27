@@ -1,0 +1,25 @@
+div.header-bottom
+    div.header-bottom__inner.container.flex.flex-justify-between.flex-align-center
+        a(href="/").header__logo
+            img(src="/images/logo.svg" alt="ЭнергоКомплект" width="197" height="38")
+
+        nav.header__menu.hidden-tablet
+            ul.header__list.flex
+                each item in headerLinks
+                    li.header__item
+                        a(href=item.href).header__link.text-upper.text-w600.text-nowrap= item.title
+
+        div.header__search.position-relative.hidden-tablet
+            input(type="text" placeholder="Поиск").header__input.w-100
+
+            button(type="button").header__search-btn.flex-center.hover-color-accent
+                include ../../icons/search
+
+        div.header__actions.flex.visible-tablet
+            button(type="button" aria-label="Поиск").header__btn.search__open.hover-color-accent
+                include ../../icons/search
+            button(type="button" aria-label="Меню").header__btn.burger-menu__open.hover-color-accent
+                span.open
+                    include ../../icons/burder-menu
+                span.close
+                    include ../../icons/cross

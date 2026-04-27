@@ -1,0 +1,57 @@
+@use '../helpers' as *;
+
+.burger-menu {
+  --top: #{rem(90)};
+
+  left: 0;
+  right: 0;
+  background: var(--color-light);
+  height: calc(100% - var(--top));
+  transition:
+          transform var(--transition-duration),
+          opacity var(--transition-duration);
+
+  &:not(.is-active) {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  &__menu {
+    margin-top: calc(var(--top) * -1);
+  }
+
+  &__item {
+    font-size: rem(12);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__open {
+
+    .close {
+      padding: rem(2);
+    }
+
+    &:not(.is-active) {
+
+      .close {
+        display: none;
+      }
+      .open {
+        display: flex;
+      }
+    }
+
+    &.is-active {
+
+      .close {
+        display: flex;
+      }
+      .open {
+        display: none;
+      }
+    }
+  }
+}
