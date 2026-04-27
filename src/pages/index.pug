@@ -14,37 +14,31 @@ block content
 
                 a(href="#").banner__btn.button.accent.w-296 Отправить заявку
 
-    section.about.section-p-block-50
-        div.about__inner.container.row
-            div.about__left.col-12.ls-col-6.flex.flex-column
-                div.about__block.is-accent
-                    p.about__title.h3.section__subtitle.text-w500 О компании
+    include ../components/blocks/about
 
-                    p.about__text
-                        | ООО «Энергокомплект» специализируется на разработке
-                        br
-                        | и производстве электротехнического оборудования для объектов энергоснабжения различного назначения, таких как тяговые
-                        br
-                        | и распределительные подстанции, генерирующие гидро
-                        br
-                        | и газотурбинные станции, а также передвижные тяговые подстанции для железнодорожного транспорта.
+    section.our-products.section-p-block-50
+        div.our-products__inner.container
+            div.our-products__header.flex.flex-align-center.flex-justify-between
+                p.our-products__title.h3.section__subtitle.text-w500 Наша продукция
 
-                    a(href="#").about__link.button.light.w-296 Подробнее
+                div.our-products__actions.flex
+                    button(type="button").our-products__btn.prev.flex-center.hover-color-accent
+                        include ../components/icons/slider-arrow
+                    button(type="button").our-products__btn.next.flex-center.hover-color-accent
+                        include ../components/icons/slider-arrow
 
-                div.about__block.flex.flex-align-center.flex-justify-between
-                    p.about__name.h4.color-accent 0,4–35 кВ
+            div.our-products__slider.swiper
+                div.swiper-wrapper
+                    each item in ourProducts
+                        a.our-products__card.swiper-slide.cursor-pointer
+                            div.our-products__img-container.img-container.w-100
+                                img(src=item.img alt=item.title)
 
-                    p.about__subtext Компактные ячейки без обслуживания на весь срок службы
+                            div.our-products__info
+                                p.our-products__name.h6= item.title
 
-                div.about__block.flex.flex-align-center.flex-justify-between
-                    p.about__name.h4.color-accent до 220 кВ
+                                p.our-products__about= item.text
 
-                    p.about__subtext Проектирование энергосистем с оптимальным соотношением цена/эффективность
+            div.our-products__pagination
 
-                div.about__block.flex.flex-align-center.flex-justify-between
-                    p.about__name.h4.color-accent 15 МВт
-
-                    p.about__subtext Опыт реализации крупных энергетических проектов «под ключ»
-
-            div.about__img-container.img-container.col-12.ls-col-6
-                img(src="/images/about-img.png" alt="")
+            a(href="#").our-products__link.button.accent.w-296.m-auto Вся продукция

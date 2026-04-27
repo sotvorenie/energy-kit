@@ -8,6 +8,10 @@
   padding-left: rem(48);
   position: relative;
 
+  @include mobile {
+    padding-left: rem(24);
+  }
+
   &::before {
     @include abs-y;
 
@@ -16,5 +20,11 @@
     height: rem(19);
     background: url("/icons/subtitle-arrow.svg") center/contain no-repeat;
     left: rem(14);
+
+    @include mobile {
+      left: rem(7);
+      width: rem(9);
+      height: rem(15);
+    }
   }
 }
