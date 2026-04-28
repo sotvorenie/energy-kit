@@ -99,6 +99,15 @@
       border-radius: 2px;
 
       &::before {
+        display: none;
+      }
+    }
+
+    &-input:checked + .request__checkbox-box {
+      background-color: var(--color-accent);
+
+      &::before {
+        display: block;
         content: '';
         position: absolute;
         top: 50%;
@@ -109,10 +118,6 @@
         border-bottom: 2px solid #fff;
         transform: translate(-50%, -70%) rotate(-45deg);
       }
-    }
-
-    &-input:checked + .request__checkbox-box {
-      background-color: var(--color-accent);
     }
   }
 

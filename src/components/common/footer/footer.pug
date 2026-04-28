@@ -1,0 +1,30 @@
+footer.footer
+    div.footer__inner.container.row
+        div.footer__top.col-12
+            a(href="#").footer__logo
+                img(src="/images/logo.svg" alt="ЭнергоКомплект" width="305" height="59")
+
+        ul.footer__list.col-12.mb-col-6.flex.flex-wrap
+            each item in [{"title": "Главная", "href": "/"}, ...headerLinks]
+                li.footer__item
+                    a(href=item.href).footer__link.text-w600.text-upper= item.title
+
+        div.footer__info.col-12.mb-col-6
+            p 192102, г. Санкт-Петербург, набережная реки Волковки, д.7, лит. А, пом.10-Н, офис 213/3
+
+            div.flex
+                a(href="tel:+78123465081") +7 (812) 346-50-81
+                a(href="mailto:info@ekt-spb.com").color-accent info@ekt-spb.com
+
+        div.footer__map.col-12.overflow-hidden
+            iframe(
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A0fd91a0133bcebe4b846395760ed96a214750730768018d1beb8e5f5ccba611e&amp;source=constructor"
+                width="683"
+                height="400"
+                frameborder="0"
+            )
+
+        div.footer__copyright.flex.flex-justify-between.col-12
+            p &copy; #[time(datetime=currentYear) #{new Date().getFullYear()}] ООО “ЭнергоКомплект.” Все права защищены.
+
+            a(href="#") Политика конфиденциальности
