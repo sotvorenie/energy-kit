@@ -1,0 +1,38 @@
+@use '../../helpers' as *;
+
+.products {
+  background: var(--color-gray-bg-2);
+
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+
+    @include mobile-above {
+      grid-auto-rows: 1fr;
+    }
+
+    @include mobile {
+      --column-gap: #{rem(15)};
+      --row-gap: #{rem(15)};
+    }
+  }
+
+  &__item {
+    border-radius: var(--border-radius);
+  }
+
+  &__img-container {
+    background: var(--color-light);
+    aspect-ratio: 305/200;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__bottom {
+    background: #FBFBFB;
+    padding: rem(10);
+    height: 100%;
+  }
+}

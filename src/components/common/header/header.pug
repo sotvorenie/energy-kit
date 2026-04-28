@@ -1,8 +1,11 @@
-include search
+include header-bottom
 
-header.header.position-relative
-    include header-top
+mixin header(activeIndex = -1)
+    include search
 
-    include header-bottom
+    header.header.position-relative
+        include header-top
 
-    include burger-menu
+        +header-bottom(activeIndex)
+
+        include burger-menu

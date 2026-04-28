@@ -14,6 +14,7 @@
 @use 'blocks/search';
 @use 'blocks/burger-menu';
 @use 'blocks/footer';
+@use 'blocks/breadcrumbs';
 
 @use 'blocks/sections/banner';
 @use 'blocks/sections/about';
@@ -24,3 +25,4 @@
 @use 'blocks/sections/news';
 @use 'blocks/sections/purchase-procedure';
 @use 'blocks/sections/request';
+@use 'blocks/sections/products';

@@ -1,0 +1,31 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/request
+
+block title
+    | Продукция
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Продукция"])
+
+    section.products.section-p-bottom-50
+        div.products__inner.container
+            h1.products__title.mb-20 Продукция
+
+            p.products__subtitle.h6.text-w400.mb-30 Серийное оборудование производства компании “Энергокомплект”
+
+            ul.products__list.row
+                each item in products
+                    li.products__item.col-12.ms-col-6.mb-col-4.ls-col-3.overflow-hidden
+                        a(href="/product-detail").products__link.w-100.h-100.d-inline-block
+                            div.products__img-container.img-container.w-100
+                                img(src="/images/products-img.jpg" alt=item)
+
+                            div.products__bottom
+                                p.text-w500= item
+
+    +request(false)

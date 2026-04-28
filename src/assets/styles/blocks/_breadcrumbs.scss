@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.breadcrumbs {
+
+  &.is-gray {
+    background: var(--color-gray-bg-2);
+  }
+
+  &__inner {
+    padding-block: fluid(30, 20);
+  }
+
+  &__list {
+    @include fluid-text(16, 14);
+
+    gap: rem(24);
+  }
+
+  &__item {
+    letter-spacing: -1%;
+
+    &:not(:last-child) {
+
+      &::after {
+        @include abs-y;
+
+        content: '';
+        width: rem(5);
+        height: rem(9);
+        background: url("/icons/breadcrumbs-arrow.svg") center/contain no-repeat;
+        right: rem(-16);
+      }
+    }
+
+    &:not(.is-here) {
+      color: var(--color-gray);
+    }
+    &.is-here {
+      pointer-events: none;
+    }
+  }
+}
