@@ -1,0 +1,57 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/request
+
+block title
+    | Продукция
+
+block header
+    +header(1)
+
+mixin items(length = 2)
+    ul.products-detail__list.row
+        each item in Array(length)
+            li.products-detail__item.col-12.mb-col-6.overflow-hidden
+                a(href="/product-detail").w-100.h-100.d-inline-block
+                    div.products-detail__img-container.img-container.w-100
+                        img(src="/images/products-img.jpg" alt="")
+
+                    div.products-detail__bottom
+                        p.products-detail__info.h6 ПСК-27,5 кВ
+
+                        p.products-detail__about
+                            | Система предназначена для приема
+                            br
+                            | и распределения электрической энергии
+
+
+block content
+    +breadcrumbs(["Главная", "Продукция", "Модульное оборудование"])
+
+    section.products-detail.section-p-bottom-50
+        div.products-detail__inner.container
+            h1.products-detail__title.mb-50 Модульное оборудование
+
+            div.products-detail__block
+                h2.products-detail__name.color-accent.mb-30 Посты секционирования (ПС)
+
+                +items
+            div.products-detail__block
+                h2.products-detail__name.color-accent.mb-30 Пункты параллельного соединения (ППС)
+
+                +items
+            div.products-detail__block
+                h2.products-detail__name.color-accent.mb-30 Пункты группировки (ПГ)
+
+                +items
+            div.products-detail__block
+                h2.products-detail__name.color-accent.mb-30 Модульные дизель-генераторные агрегаторы (ДГА)
+
+                +items(1)
+            div.products-detail__block
+                h2.products-detail__name.color-accent.mb-30 Передвижные модульные тяговые станции
+
+                +items(1)
+
+    +request(false)

@@ -1,7 +1,7 @@
 mixin breadcrumbs(arr = [], isGray = true)
     section.breadcrumbs(class=isGray ? 'is-gray' : '')
         div.breadcrumbs__inner.container
-            ul.breadcrumbs__list.flex
+            ul.breadcrumbs__list.flex.flex-wrap
                 each item, index in arr
                     li.breadcrumbs__item.position-relative(class=index === arr.length - 1 ? 'is-here' : '')
                         a(href="#").breadcrumbs__link= item

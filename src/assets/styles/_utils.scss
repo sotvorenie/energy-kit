@@ -87,8 +87,11 @@
 }
 
 .mb-20 {
-   margin-bottom: rem(20);
+   margin-bottom: fluid(20, 15);
 }
 .mb-30 {
-  margin-bottom: rem(30);
+  margin-bottom: fluid(30, 20);
+}
+.mb-50 {
+  margin-bottom: fluid(50, 25);
 }

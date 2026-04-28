@@ -1,0 +1,49 @@
+@use '../../helpers' as *;
+
+.products-detail {
+  background: var(--color-gray-bg-2);
+
+  &__block {
+
+    &:not(:last-child) {
+      margin-bottom: fluid(40, 20);
+    }
+  }
+
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+
+    @include mobile {
+      --row-gap: #{rem(15)};
+    }
+  }
+
+  &__item, &__img-container {
+    background: var(--color-light);
+  }
+
+  &__item {
+    border-radius: var(--border-radius);
+  }
+
+  &__img-container {
+    aspect-ratio: 630/537;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__bottom {
+    padding: fluid(20, 15);
+  }
+
+  &__info {
+    margin-bottom: rem(10);
+  }
+
+  &__about {
+    @include fluid-text(16, 14);
+  }
+}
