@@ -1,0 +1,16 @@
+section.purchase-procedure.section-p-block-50
+    div.purchase-procedure__inner.container
+        div.purchase-procedure__header.section__header
+            p.purchase-procedure__title.h3.section__subtitle.text-w500 Порядок покупки
+
+        p.purchase-procedure__subtitle.h6.text-w500 Все станки, произведенные в Лазеры и Аппаратура, обслуживаются нашими сервисными инженерами в течении всего срока службы.
+
+        ul.purchase-procedure__list.row
+            each item, index in purchaseProcedure
+                li.purchase-procedure__item(class= index % 3 === 2 ? 'is-accent col-12' : 'col-12 mb-col-6')
+                    div.purchase-procedure__left.flex
+                        p.purchase-procedure__number.h6.text-w500= `${index + 1})`
+
+                        p.purchase-procedure__name.h5.color-accent= item.title
+
+                    p.purchase-procedure__text= item.text
