@@ -45,7 +45,6 @@
     border-radius: var(--border-radius);
 
     @include tablet {
-      order: -1;
       aspect-ratio: 21/9;
     }
 

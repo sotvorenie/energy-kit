@@ -1,0 +1,41 @@
+mixin request(isGray = true)
+    section.request.section-p-block-50(class=isGray ? 'is-gray' : '')
+        div.request__inner.container.row
+            div.request__left.col-12.mb-col-7.ls-col-6
+                p.request__title.h3.section__subtitle.text-w500
+                    | Оставьте заявку и мы подберем
+                    br
+                    | для вас оборудование
+
+                p.request__subtitle.text-w500 Если у вас имеется техническое задание или чертеж, нажмите кнопку  “У меня есть чертеж”, заполните форму и отправьте заявку.
+
+                form.request__form.row
+                    .request__field.col-12.ms-col-6
+                        input.request__input(type="text" required placeholder=" " aria-label="Как к вам обращаться?")
+                        span.request__label Как к вам обращаться?
+
+                    .request__field.col-12.ms-col-6
+                        input.request__input(type="text" required placeholder=" " aria-label="Название компании")
+                        span.request__label Название компании
+
+                    .request__field.col-12.ms-col-6
+                        input.request__input(type="tel" required placeholder=" " aria-label="Контактный телефон")
+                        span.request__label Контактный телефон
+
+                    .request__field.col-12.ms-col-6
+                        input.request__input(type="email" required placeholder=" " aria-label="E-mail")
+                        span.request__label E-mail
+
+                    input.request__input.col-12(type="text" placeholder="Опишите вашу задачу")
+
+                    div.request__btn-bar.row
+                        button(type="submit").button.accent.col-12.mb-col-6 Отправить заявку
+                        a(href="#").button.blue.col-12.mb-col-6 у меня есть чертеж
+
+                    label.request__checkbox.flex.col-12
+                        input(type="checkbox").request__checkbox-input.visually-hidden
+                        span.request__checkbox-box.position-relative
+                        span.request__checkbox-text Согласен на обработку персональных данных
+
+            div.request__img-container.img-container.col-12.mb-col-5.ls-col-6
+                img(src="/images/request-img.png" alt="" loading="lazy")

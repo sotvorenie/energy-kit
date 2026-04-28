@@ -1,0 +1,122 @@
+@use '../../helpers' as *;
+
+.request {
+
+  &.is-gray {
+    background: var(--color-gray-bg-2);
+  }
+
+  &__inner {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+  }
+
+  &__title {
+    margin-bottom: rem(20);
+  }
+
+  &__subtitle {
+    margin-bottom: fluid(30, 20);
+  }
+
+  &__form {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+
+    @include mobile {
+      --column-gap: #{rem(15)};
+      --row-gap: #{rem(15)};
+    }
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__input {
+    background: var(--color-light);
+    border: var(--border-alt);
+    border-radius: var(--border-radius-medium);
+    padding: rem(16) rem(20);
+    font-size: rem(16);
+    width: 100%;
+
+    @include mobile {
+      padding: rem(12) rem(10);
+    }
+
+    &::placeholder {
+      @include fluid-text(16, 12);
+
+      color: var(--color-gray);
+    }
+
+    &:focus + .request__label,
+    &:not(:placeholder-shown) + .request__label {
+      display: none;
+    }
+  }
+
+  &__label {
+    @include abs-y;
+    @include fluid-text(16, 12);
+
+    left: rem(20);
+    pointer-events: none;
+    color: var(--color-gray);
+    padding-right: rem(10);
+
+    @include mobile {
+      left: rem(10);
+    }
+
+    &::after {
+      content: '*';
+      color: #DA1414;
+      margin-left: rem(5);
+    }
+  }
+
+  &__btn-bar {
+    margin-top: rem(10);
+
+    @include mobile-above {
+      margin-bottom: rem(-5);
+    }
+  }
+
+  &__checkbox {
+    @include fluid-text(16, 14);
+
+    gap: rem(13);
+    color: var(--color-gray);
+    text-decoration: underline;
+
+    &-box {
+      @include square(16);
+
+      border: 1px solid var(--color-accent);
+      border-radius: 2px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 5px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: translate(-50%, -70%) rotate(-45deg);
+      }
+    }
+
+    &-input:checked + .request__checkbox-box {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__img-container {
+    border-radius: var(--border-radius);
+  }
+}
