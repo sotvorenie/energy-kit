@@ -86,7 +86,7 @@
   }
 
   &__checkbox {
-    @include fluid-text(16, 14);
+    @include fluid-text(16, 12);
 
     gap: rem(13);
     color: var(--color-gray);
@@ -118,5 +118,9 @@
 
   &__img-container {
     border-radius: var(--border-radius);
+
+    @include mobile {
+      aspect-ratio: 16/9;
+    }
   }
 }
