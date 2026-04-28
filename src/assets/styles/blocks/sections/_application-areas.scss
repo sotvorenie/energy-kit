@@ -2,7 +2,22 @@
 
 .application-areas {
 
-  &__card {
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+
+    @include tablet {
+      --column-gap: #{rem(15)};
+      --row-gap: #{rem(15)};
+    }
+
+    @include mobile {
+      --column-gap: #{rem(10)};
+      --row-gap: #{rem(10)};
+    }
+  }
+
+  &__item {
     border-radius: var(--border-radius);
   }
 

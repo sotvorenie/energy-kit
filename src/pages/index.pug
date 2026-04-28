@@ -56,24 +56,14 @@ block content
             div.section__header
                 p.application-areas__title.h3.section__subtitle.text-w500 Отрасли применения
 
-                div.section__header_arrow_actions.flex
-                    button(type="button").application-areas__btn.section__header_arrow.prev.flex-center.hover-color-accent
-                        include ../components/icons/slider-arrow
-                    button(type="button").application-areas__btn.section__header_arrow.next.flex-center.hover-color-accent
-                        include ../components/icons/slider-arrow
+            ul.application-areas__list.row
+                each item in applicationAreas
+                    li.application-areas__item.overflow-hidden.col-12.mb-col-4
+                        div.application-areas__img-container.img-container.w-100
+                            img(src=item.img alt="")
 
-            div.application-areas__slider.slider.swiper
-                div.swiper-wrapper
-                    each item in applicationAreas
-                        div.application-areas__card.swiper-slide.overflow-hidden
-                            div.application-areas__img-container.img-container.w-100
-                                img(src=item.img alt="")
-
-                            div.application-areas__info
-                                p.h6= item.title
-
-
-            div.application-areas__pagination.slider__pagination
+                        div.application-areas__info
+                            p.h6= item.title
 
     include ../components/blocks/news
 
